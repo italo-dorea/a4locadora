@@ -140,12 +140,34 @@
                     Alugue Agora
                     <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </a>
-<button class="md:hidden text-primary">
+<button aria-controls="mobile-drawer" aria-expanded="false" aria-label="Abrir menu" class="md:hidden text-primary" id="mobile-menu-btn">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
 </header>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 z-[60] hidden" id="mobile-drawer">
+<div class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm" id="mobile-drawer-backdrop"></div>
+<div class="absolute top-0 right-0 h-full w-72 max-w-[80%] bg-surface flex flex-col p-6 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out" id="mobile-drawer-panel">
+<div class="flex justify-between items-center mb-8">
+<img alt="A4 Locadora" class="h-8 w-auto object-contain" src="assets/logo-a4.png"/>
+<button aria-label="Fechar menu" class="text-on-surface-variant" id="mobile-drawer-close">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="mobile-drawer-link py-3 px-2 rounded-lg font-button-text text-on-surface hover:bg-surface-gray hover:text-primary transition-colors" href="#frota">Nossa Frota</a>
+<a class="mobile-drawer-link py-3 px-2 rounded-lg font-button-text text-on-surface hover:bg-surface-gray hover:text-primary transition-colors" href="#planos">Planos</a>
+<a class="mobile-drawer-link py-3 px-2 rounded-lg font-button-text text-on-surface hover:bg-surface-gray hover:text-primary transition-colors" href="#faq">Dúvidas Frequentes</a>
+<a class="mobile-drawer-link py-3 px-2 rounded-lg font-button-text text-on-surface hover:bg-surface-gray hover:text-primary transition-colors" href="#contato">Contato</a>
+</nav>
+<a class="mobile-drawer-link btn-primary font-button-text py-3 px-6 rounded-full text-center flex items-center justify-center gap-2 mt-6" href="#contato">
+                Alugue Agora
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
 <!-- Hero Section (Dark Brand Theme) -->
 <section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop bg-on-surface overflow-hidden">
 <div class="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -760,6 +782,37 @@
                     });
                 }
             });
+        });
+
+        // Mobile drawer menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileDrawerPanel = document.getElementById('mobile-drawer-panel');
+        const mobileDrawerBackdrop = document.getElementById('mobile-drawer-backdrop');
+        const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
+        function openMobileDrawer() {
+            mobileDrawer.classList.remove('hidden');
+            requestAnimationFrame(() => mobileDrawerPanel.classList.remove('translate-x-full'));
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileDrawer() {
+            mobileDrawerPanel.classList.add('translate-x-full');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            setTimeout(() => mobileDrawer.classList.add('hidden'), 300);
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileDrawer);
+        mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+        mobileDrawerBackdrop.addEventListener('click', closeMobileDrawer);
+        document.querySelectorAll('.mobile-drawer-link').forEach(link => {
+            link.addEventListener('click', closeMobileDrawer);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileDrawer.classList.contains('hidden')) closeMobileDrawer();
         });
 
         // Hero carousel: alterna entre os veículos disponíveis (carros e motos)
