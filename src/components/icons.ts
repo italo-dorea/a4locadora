@@ -20,6 +20,7 @@ export {
   SquaresFour,
   ThumbsUp,
   User,
+  Warning,
   WhatsappLogo,
   Wrench,
   YoutubeLogo,

@@ -33,7 +33,7 @@ export function Tagline({ texto }: { texto: string }) {
   }, []);
 
   return (
-    <p ref={raiz} className="mx-auto max-w-[680px] text-4xl font-semibold text-white md:text-5xl">
+    <p ref={raiz} className="max-w-[680px] text-4xl font-semibold text-white md:text-5xl">
       {palavras.map((p, i) => (
         <span key={i}>
           <span

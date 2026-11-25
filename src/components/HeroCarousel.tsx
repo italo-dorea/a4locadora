@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { veiculos, rotuloTipo } from "@/lib/data";
+import { nomeVeiculo, veiculos } from "@/lib/data";
 
-/** Carrossel do topo: alterna entre os veículos disponíveis marcados com destaqueHero no JSON. */
+/** Carrossel do topo: alterna entre as motos marcadas com destaqueHero em veiculos.json. */
 export function HeroCarousel() {
   const itens = veiculos.filter((v) => v.disponivel && v.destaqueHero);
   const [indice, setIndice] = useState(0);
@@ -16,12 +16,11 @@ export function HeroCarousel() {
   }, [itens.length]);
 
   if (!itens.length) return null;
-  const atual = itens[indice];
 
   return (
     <>
       <span className="absolute top-6 left-6 z-10 rounded-full border border-border-subtle bg-surface px-4 py-1 text-xs font-semibold tracking-wider text-on-surface-variant shadow-sm">
-        {`${atual.modelo} ${atual.ano} · ${rotuloTipo[atual.tipo]} DISPONÍVEL`.toUpperCase()}
+        {nomeVeiculo(itens[indice]).toUpperCase()}
       </span>
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
         {itens.map((v, i) => (

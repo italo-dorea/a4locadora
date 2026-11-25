@@ -18,10 +18,12 @@ Para publicar, envie o conteúdo da pasta `out/` para a hospedagem (inclui `.hta
 
 | Arquivo | O que controla |
 |---|---|
-| `src/data/veiculos.json` | Frota: cards, carrossel do topo e opções do formulário. Para adicionar um veículo, copie um bloco, coloque a imagem em `public/assets/` e rode o build. `disponivel: false` tira o veículo do formulário e do carrossel. |
-| `src/data/planos.json` | Planos: preços, caução, benefícios e as opções do formulário. |
+| `src/data/veiculos.json` | Frota de motos: cards, carrossel do topo e opções do formulário. Para adicionar uma moto, copie um bloco, coloque a imagem em `public/assets/` e rode o build. `disponivel: false` tira a moto do formulário e do carrossel. |
+| `src/data/planos.json` | Planos de locação: diária, valor semanal, caução e a nota dos cards. |
 | `src/data/faq.json` | Perguntas frequentes (também geram o schema FAQ para buscadores). |
-| `src/data/site.json` | Email de destino do formulário, WhatsApp, endereço e redes sociais. |
+| `src/data/site.json` | Email de destino do formulário, WhatsApp, endereço, redes, vídeo do YouTube e a mensagem do formulário. |
+
+O conteúdo (textos, motos, planos e FAQ) segue o site anterior em WordPress. O espaçamento é padronizado em `src/lib/ui.ts` (`SECAO` e `CONTAINER`), usado por header, todas as seções e footer.
 
 ## Formulário de contato (sem backend)
 

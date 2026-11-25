@@ -1,5 +1,5 @@
-import { Autoridade } from "@/components/Autoridade";
-import { Beneficios } from "@/components/Beneficios";
+import { ChamadaFinal } from "@/components/ChamadaFinal";
+import { ComoFunciona } from "@/components/ComoFunciona";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 import { Frota } from "@/components/Frota";
@@ -7,7 +7,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { SecaoContato } from "@/components/Formulario";
 import { Planos } from "@/components/Planos";
-import { Tagline } from "@/components/Tagline";
+import { QuemSomos } from "@/components/QuemSomos";
+import { Videos } from "@/components/Videos";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import faq from "@/data/faq.json";
 import { siteConfig } from "@/lib/data";
@@ -22,10 +23,10 @@ const jsonLd = {
       email: siteConfig.emailContato,
       telephone: "+" + siteConfig.whatsapp,
       image: `${siteConfig.url}/opengraph-image.png`,
-      areaServed: "Salvador e Região Metropolitana",
+      areaServed: "Salvador e região Metropolitana",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Av. Tancredo Neves, 1189, Edif. Guimarães Trade, Sala 1603, Caminho das Árvores",
+        streetAddress: "Av. Tancredo Neves, 1189, Edif. Guimarães Trade Sala 1603, Caminho das Árvores",
         addressLocality: "Salvador",
         addressRegion: "BA",
         postalCode: "41820-021",
@@ -55,15 +56,13 @@ export default function Home() {
       <Header />
       <main id="conteudo">
         <Hero />
-        <Beneficios />
-        {/* Tagline: usa a frase de apoio que antes ficava abaixo do título "Por que escolher a A4?" */}
-        <section aria-label="Resumo dos benefícios" className="on-dark bg-ink-0 px-4 py-24 md:px-16">
-          <Tagline texto="Tudo que você precisa para focar no que importa: suas entregas e seus ganhos." />
-        </section>
+        <QuemSomos />
+        <ComoFunciona />
+        <ChamadaFinal />
         <Frota />
         <Planos />
-        <Autoridade />
         <Faq />
+        <Videos />
         <SecaoContato />
       </main>
       <Footer />

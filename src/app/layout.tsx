@@ -5,9 +5,9 @@ import { siteConfig } from "@/lib/data";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" });
 
-const titulo = "A4 Locadora | Aluguel de Carros e Motos em Salvador";
+const titulo = "A4 Locadora de Motos";
 const descricao =
-  "A4 Locadora: aluguel de carros e motos em Salvador e Região Metropolitana. Planos flexíveis, seguro incluso e manutenção compartilhada para quem trabalha ou precisa rodar todos os dias.";
+  "Somos especializados no aluguel de motos para motoboys e entregadores. Aqui, você aluga rápido e fácil, com planos flexíveis que cabem no seu bolso!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

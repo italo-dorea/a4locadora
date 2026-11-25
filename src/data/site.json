@@ -1,13 +1,21 @@
 {
-  "nome": "A4 Locadora",
+  "nome": "A4 Locadora de Motos",
   "url": "https://a4locadora.com.br",
   "emailContato": "contato@a4locadora.com.br",
   "whatsapp": "5571996963026",
+  "whatsappMensagemInicial": "Olá, vim através do site e gostaria de mais informações sobre o aluguel de motos!",
   "telefoneExibicao": "(71) 99696-3026",
-  "endereco": "Av. Tancredo Neves, 1189, Edif. Guimarães Trade, Sala 1603, Caminho das Árvores, Salvador/BA — CEP 41820-021",
+  "endereco": "Av. Tancredo Neves, 1189, Edif. Guimarães Trade Sala 1603 - Caminho das Árvores Salvador/BA",
+  "cep": "CEP: 41820-021",
   "instagram": "https://instagram.com/a4locadora",
   "youtube": "https://youtube.com/@a4locadora",
+  "video": {
+    "id": "Gq76Q7MlaMY",
+    "titulo": "A4 Locadora de Motos: Alugue sua Moto com Facilidade!"
+  },
   "formulario": {
+    "titulo": "Formulário de Locação",
+    "mensagem": "No momento estamos sem motos disponíveis, preencha os dados para cadastro de reserva.",
     "assunto": "Nova solicitação de locação — Site A4",
     "tamanhoMaximoArquivoMB": 5,
     "tamanhoMaximoTotalMB": 10

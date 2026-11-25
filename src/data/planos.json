@@ -1,28 +1,26 @@
 {
-  "_comentario": "Planos de aluguel. Valores em reais (número). A primeira vantagem de cada card (caução) é montada a partir de caucao e parcelasCaucao.",
+  "_comentario": "Planos de locação. Valores em reais (número). subtitulo é opcional.",
   "planos": [
     {
       "id": "anual",
-      "etiqueta": "PLANO ANUAL",
-      "rotuloFormulario": "Plano Anual",
-      "valorFormulario": "Plano Anual",
+      "nome": "Plano Anual",
+      "subtitulo": "",
+      "valorFormulario": "Anual",
       "valorDia": 42,
       "valorSemana": 300,
       "caucao": 600,
-      "parcelasCaucao": 5,
-      "beneficios": ["Seguro contra roubo e furto incluso", "Manutenção compartilhada", "Sem limite de quilometragem"]
+      "parcelasCaucao": 5
     },
     {
-      "id": "meu-veiculo-30-meses",
-      "etiqueta": "PLANO MEU VEÍCULO · 30 MESES",
-      "rotuloFormulario": "Meu Veículo (30 meses)",
-      "valorFormulario": "Plano Meu Veículo (30 meses)",
+      "id": "minha-moto",
+      "nome": "Plano Minha Moto",
+      "subtitulo": "30 meses",
+      "valorFormulario": "Minha Moto",
       "valorDia": 51,
       "valorSemana": 360,
       "caucao": 700,
-      "parcelasCaucao": 5,
-      "beneficios": ["Seguro contra roubo e furto incluso", "Manutenção compartilhada", "Sem limite de quilometragem"]
+      "parcelasCaucao": 5
     }
   ],
-  "observacao": "Valores de diária a partir de, referentes a motos. Para carros, consulte condições — a tarifa final considera veículo, modelo, período, acessórios e seguros adicionais, com transparência total no processo."
+  "nota": "* Consulte informações e disponibilidade"
 }

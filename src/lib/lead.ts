@@ -1,18 +1,18 @@
 import { siteConfig } from "@/lib/data";
 
-/** Campos do formulário (mesmos nomes do formulário original, que chegam no email). */
+/** Campos do formulário (mesmos do formulário do site anterior). */
 export interface Lead {
-  tipo_veiculo: string;
-  plano: string;
   nome_completo: string;
   cpf: string;
   email: string;
   data_nascimento: string; // AAAA-MM-DD
   whatsapp: string;
-  cep: string;
   endereco: string;
-  modelo_preferencia: string;
-  aceita_outro_modelo: string;
+  cep: string;
+  moto_preferencia: string;
+  plano_locacao: string;
+  aceita_outro_modelo: string; // "Sim", "Não" ou vazio
+  comprovanteAnexado: boolean;
 }
 
 // ---------- máscaras ----------
@@ -62,16 +62,27 @@ export function dataNascimentoValida(v: string): boolean {
 }
 
 const EXTENSOES = ["pdf", "jpg", "jpeg", "png"];
+const MB = 1024 * 1024;
 
-export function validarArquivo(file: File | null | undefined): string | null {
-  if (!file || file.size === 0) return "Anexe o arquivo para continuar";
-  const ext = file.name.split(".").pop()?.toLowerCase() ?? "";
-  if (!EXTENSOES.includes(ext)) return "Formato aceito: PDF, JPG ou PNG";
-  if (file.size > siteConfig.formulario.tamanhoMaximoArquivoMB * 1024 * 1024) {
-    return `Arquivo acima de ${siteConfig.formulario.tamanhoMaximoArquivoMB}MB`;
+/** Arquivos vazios (nenhum selecionado) são descartados. */
+export function arquivosSelecionados(fd: FormData, campo: string): File[] {
+  return fd.getAll(campo).filter((f): f is File => f instanceof File && f.size > 0);
+}
+
+export function validarArquivos(arquivos: File[], obrigatorio: boolean): string | null {
+  if (!arquivos.length) return obrigatorio ? "Anexe o arquivo para continuar" : null;
+  for (const f of arquivos) {
+    const ext = f.name.split(".").pop()?.toLowerCase() ?? "";
+    if (!EXTENSOES.includes(ext)) return "Formato aceito: PDF, JPG ou PNG";
+    if (f.size > siteConfig.formulario.tamanhoMaximoArquivoMB * MB) {
+      return `Arquivo acima de ${siteConfig.formulario.tamanhoMaximoArquivoMB}MB`;
+    }
   }
   return null;
 }
+
+export const totalAcimaDoLimite = (arquivos: File[]) =>
+  arquivos.reduce((s, f) => s + f.size, 0) > siteConfig.formulario.tamanhoMaximoTotalMB * MB;
 
 // ---------- envio de email em segundo plano (FormSubmit via AJAX, sem backend) ----------
 export interface ResultadoEmail {
@@ -80,7 +91,7 @@ export interface ResultadoEmail {
 }
 
 export async function enviarEmail(formData: FormData): Promise<ResultadoEmail> {
-  // Campos de configuração do FormSubmit (iguais aos do formulário original)
+  // Campos de configuração do FormSubmit
   formData.set("_subject", siteConfig.formulario.assunto);
   formData.set("_template", "table");
   formData.set("_captcha", "false");
@@ -112,22 +123,20 @@ function dataBR(iso: string) {
 
 export function montarMensagemWhatsApp(lead: Lead): string {
   const linhas = [
-    "Olá, A4 Locadora! Acabei de preencher o formulário no site.",
+    "Olá, A4 Locadora! Acabei de preencher o formulário de locação no site.",
     "",
-    `*Tipo de veículo:* ${lead.tipo_veiculo}`,
-    `*Plano de interesse:* ${lead.plano}`,
     `*Nome completo:* ${lead.nome_completo}`,
     `*CPF:* ${lead.cpf}`,
     `*Email:* ${lead.email}`,
     `*Data de nascimento:* ${dataBR(lead.data_nascimento)}`,
     `*WhatsApp:* ${lead.whatsapp}`,
-    `*CEP:* ${lead.cep}`,
     `*Endereço:* ${lead.endereco}`,
-    `*Veículo de preferência:* ${lead.modelo_preferencia}`,
-    `*Aceita outro modelo:* ${lead.aceita_outro_modelo}`,
-    "",
-    "A CNH digital e o comprovante de residência seguiram por email.",
+    `*CEP:* ${lead.cep}`,
+    `*Moto de preferência:* ${lead.moto_preferencia}`,
+    `*Plano de locação:* ${lead.plano_locacao}`,
   ];
+  if (lead.aceita_outro_modelo) linhas.push(`*Aceita outro modelo:* ${lead.aceita_outro_modelo}`);
+  linhas.push("", lead.comprovanteAnexado ? "A CNH e o comprovante de residência seguiram por email." : "A CNH seguiu por email.");
   return linhas.join("\n");
 }
 

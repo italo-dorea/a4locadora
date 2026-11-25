@@ -2,11 +2,9 @@ import site from "@/data/site.json";
 import veiculosJson from "@/data/veiculos.json";
 import planosJson from "@/data/planos.json";
 
-export type TipoVeiculo = "carro" | "moto";
-
 export interface Veiculo {
   id: string;
-  tipo: TipoVeiculo;
+  tipo: "moto";
   marca: string;
   modelo: string;
   ano: number;
@@ -15,33 +13,30 @@ export interface Veiculo {
   alt: string;
   disponivel: boolean;
   destaqueHero: boolean;
-  caracteristicas: string[];
 }
 
 export interface Plano {
   id: string;
-  etiqueta: string;
-  rotuloFormulario: string;
+  nome: string;
+  subtitulo: string;
   valorFormulario: string;
   valorDia: number;
   valorSemana: number;
   caucao: number;
   parcelasCaucao: number;
-  beneficios: string[];
 }
 
 export const siteConfig = site;
 export const veiculos = veiculosJson.veiculos as Veiculo[];
 export const planos = planosJson.planos as Plano[];
-export const observacaoPlanos = planosJson.observacao;
+export const notaPlanos = planosJson.nota;
 
-/** "42" -> "R$ 42,00" */
+/** 42 -> "R$ 42,00" */
 export function formatarReais(valor: number): string {
   return "R$ " + valor.toFixed(2).replace(".", ",");
 }
 
+/** "Factor 2025 Branca" */
 export function nomeVeiculo(v: Veiculo): string {
-  return `${v.modelo} ${v.ano}`;
+  return `${v.modelo} ${v.ano} ${v.cor}`;
 }
-
-export const rotuloTipo: Record<TipoVeiculo, string> = { carro: "Carro", moto: "Moto" };

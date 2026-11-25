@@ -1,18 +1,60 @@
 {
   "perguntas": [
-    { "pergunta": "Quais documentos são necessários para alugar?", "resposta": "CNH digital com foto e comprovante de residência atual. Para motos, é preciso habilitação categoria A; para carros, categoria B." },
-    { "pergunta": "Existe um período mínimo de aluguel?", "resposta": "Sim, o período mínimo é de 12 meses, com flexibilidade para durações mais longas e tarifas reduzidas." },
-    { "pergunta": "Como funciona a política de combustível?", "resposta": "O veículo é entregue com combustível fora da reserva. A devolução é feita sem taxa de reabastecimento, independentemente da quantidade." },
-    { "pergunta": "Existe limite de quilometragem?", "resposta": "Não há limite de quilometragem. O contrato é individual e de uso exclusivo do locatário." },
-    { "pergunta": "Posso fazer viagens com o veículo alugado?", "resposta": "Sim, desde que dentro do limite contratado e da cobertura do seguro. Informe o itinerário no momento da reserva." },
-    { "pergunta": "O seguro está incluso no aluguel?", "resposta": "Todos os carros e motos incluem seguro contra roubo e furto. Proteções adicionais, como cobertura a terceiros e assistência 24h, também estão disponíveis." },
-    { "pergunta": "Qual a idade mínima para alugar?", "resposta": "21 anos, com habilitação válida há no mínimo 2 anos (categoria A para moto, B para carro)." },
-    { "pergunta": "Existe taxa por atraso na devolução?", "resposta": "Sim, a taxa varia conforme o período de atraso. Entre em contato imediatamente caso precise de mais tempo." },
-    { "pergunta": "Posso adicionar um segundo condutor?", "resposta": "Não. O contrato de aluguel é individual e não é permitido adicionar um segundo condutor." },
-    { "pergunta": "O que fazer em caso de acidente?", "resposta": "Garanta sua segurança, registre o ocorrido junto à autoridade competente e nos informe imediatamente. Fornecemos assistência e orientações sobre a cobertura do seguro." },
-    { "pergunta": "Posso reservar um modelo específico?", "resposta": "Você pode indicar sua preferência de modelo. Faremos o possível para atendê-la, de acordo com a disponibilidade da frota." },
-    { "pergunta": "Vocês trabalham com veículos elétricos ou outros combustíveis?", "resposta": "Atualmente trabalhamos com carros e motos a combustível tradicional. Veículos elétricos estão em fase de exploração pela nossa equipe." },
-    { "pergunta": "Como são calculadas as tarifas?", "resposta": "O cálculo considera modelo, período, acessórios e seguros adicionais, sempre com transparência total no processo." },
-    { "pergunta": "É possível alterar o local de devolução?", "resposta": "É possível, dependendo da nossa rede e disponibilidade, podendo estar sujeito a uma taxa adicional." }
+    {
+      "pergunta": "Quais documentos são necessários para alugar uma moto?",
+      "resposta": "Para alugar uma moto, você precisará apresentar um documento habilitação com foto (CNH), comprovante de residência atual e a carteira de habilitação categoria A válida."
+    },
+    {
+      "pergunta": "Existe um período mínimo de aluguel?",
+      "resposta": "Sim, o período mínimo de aluguel é de 12 meses. No entanto, oferecemos flexibilidade para aluguéis de longa duração com tarifas reduzidas."
+    },
+    {
+      "pergunta": "Qual é a política de combustível?",
+      "resposta": "A moto será entregue com combustível fora da reserva, e você poderá devolvê-la com a quantidade de combustível que preferir. Não será cobrada nenhuma taxa de reabastecimento."
+    },
+    {
+      "pergunta": "Há restrições de quilometragem para o aluguel das motos?",
+      "resposta": "Não há limite de quilometragem para o aluguel das motos. No entanto, o contrato é individual, e a moto deve ser utilizada exclusivamente pelo locatário, não sendo permitida sua utilização por outras pessoas."
+    },
+    {
+      "pergunta": "Posso viajar com a moto alugada?",
+      "resposta": "Sim, você pode viajar com a moto alugada. No entanto, o uso para viagens dependerá do limite de quilometragem contratado e da cobertura do seguro. Recomendamos informar o itinerário planejado no momento da reserva para garantir que tudo esteja devidamente coberto."
+    },
+    {
+      "pergunta": "E o seguro ?",
+      "resposta": "Todas as nossas motos possuem seguro incluído no valor do aluguel, com cobertura contra roubo e furto, sem custos adicionais. Caso deseje, você pode contratar proteções adicionais, como cobertura para terceiros e assistência 24 horas, no momento da assinatura do contrato."
+    },
+    {
+      "pergunta": "Existe uma idade mínima para alugar uma moto?",
+      "resposta": "Sim, o locatário deve ter pelo menos 21 anos de idade e possuir carteira de habilitação categoria A válida por no mínimo 2 anos."
+    },
+    {
+      "pergunta": "Existe uma taxa por atraso na devolução da moto?",
+      "resposta": "Sim, atrasos na devolução da moto estão sujeitos a uma taxa adicional. A taxa varia conforme o período de atraso. Recomendamos que entre em contato conosco o quanto antes se prever que não conseguirá devolver a moto no horário agendado."
+    },
+    {
+      "pergunta": "Posso adicionar um segundo condutor no contrato de aluguel?",
+      "resposta": "Não, o contrato de aluguel é individual e não é permitido adicionar um segundo condutor. A moto deve ser utilizada exclusivamente pelo locatário."
+    },
+    {
+      "pergunta": "O que devo fazer em caso de acidente?",
+      "resposta": "Em caso de acidente, a primeira ação é garantir a segurança de todos os envolvidos. Depois, entre em contato com o órgão de trânsito competente para registrar a ocorrência e nos informe imediatamente. Forneceremos assistência e orientações sobre os próximos passos, incluindo informações sobre cobertura do seguro."
+    },
+    {
+      "pergunta": "Posso reservar uma moto específica?",
+      "resposta": "Você pode indicar sua preferência por um modelo específico durante o processo de reserva. Faremos o nosso melhor para atender à sua solicitação com base na disponibilidade das motos no momento da retirada."
+    },
+    {
+      "pergunta": "Qual a política para uso de combustível alternativo ou elétrico?",
+      "resposta": "Atualmente, todas as nossas motos utilizam combustível tradicional. Estamos explorando a inclusão de motos elétricas em nossa frota e atualizaremos nossos clientes conforme essas opções tornarem-se disponíveis."
+    },
+    {
+      "pergunta": "Como são calculadas as tarifas de aluguel?",
+      "resposta": "As tarifas de aluguel são calculadas com base no modelo da moto, no período de aluguel e em quaisquer acessórios ou seguros adicionais selecionados. Todas as tarifas são claramente detalhadas no processo de reserva para garantir transparência total."
+    },
+    {
+      "pergunta": "Posso alterar o local de devolução da moto?",
+      "resposta": "Dependendo da nossa rede de lojas e disponibilidade, é possível alterar o local de devolução. Esta opção pode estar sujeita a uma taxa adicional. Consulte-nos durante a reserva para verificar essa possibilidade."
+    }
   ]
 }

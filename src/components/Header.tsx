@@ -3,17 +3,18 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "@phosphor-icons/react";
-import { btnPrimary } from "@/lib/ui";
+import { btnPrimary, CONTAINER, SECAO_X } from "@/lib/ui";
 
 const links = [
-  { href: "#frota", rotulo: "Nossa Frota" },
+  { href: "#como-funciona", rotulo: "Como funciona" },
+  { href: "#motos", rotulo: "Motos" },
   { href: "#planos", rotulo: "Planos" },
-  { href: "#faq", rotulo: "Dúvidas Frequentes" },
-  { href: "#contato", rotulo: "Contato" },
+  { href: "#faq", rotulo: "FAQ" },
+  { href: "#videos", rotulo: "Vídeos" },
 ];
 
 // Atrasos escalonados da revelação dos links (classes literais para o Tailwind enxergar)
-const atrasos = ["delay-100", "delay-150", "delay-200", "delay-300", "delay-500"];
+const atrasos = ["delay-100", "delay-150", "delay-200", "delay-300", "delay-500", "delay-700"];
 
 export function Header() {
   const [aberto, setAberto] = useState(false);
@@ -48,8 +49,11 @@ export function Header() {
 
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-[70] flex justify-center px-4">
-        <div className="pointer-events-auto mx-auto mt-6 flex w-max max-w-full items-center gap-6 rounded-full border border-border-subtle bg-white/80 py-2 pr-2 pl-4 shadow-sm backdrop-blur-xl transition-all duration-700 ease-fluid md:gap-8">
+      {/* Mesmo padding lateral das seções (SECAO_X) e mesma largura máxima (CONTAINER): a pílula alinha com o conteúdo */}
+      <header className={`pointer-events-none fixed inset-x-0 top-0 z-[70] ${SECAO_X}`}>
+        <div
+          className={`${CONTAINER} pointer-events-auto mt-6 flex items-center justify-between gap-6 rounded-full border border-border-subtle bg-white/80 py-2 pr-2 pl-4 shadow-sm backdrop-blur-xl transition-all duration-700 ease-fluid`}
+        >
           <a href="#inicio" aria-label="A4 Locadora, ir para o início" className="shrink-0 rounded-full">
             <Image src="/assets/logo-a4.webp" alt="A4 Locadora" width={640} height={230} className="h-8 w-auto" priority />
           </a>
@@ -64,7 +68,7 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <a href="#contato" className={`${btnPrimary} hidden text-sm sm:inline-flex`}>
-              Alugue Agora
+              Alugue agora
               <ArrowRight size={16} weight="bold" aria-hidden />
             </a>
 
@@ -121,9 +125,9 @@ export function Header() {
           <a
             href="#contato"
             onClick={() => setAberto(false)}
-            className={`${btnPrimary} transition-all duration-700 ${aberto ? `translate-y-0 opacity-100 ${atrasos[4]}` : "translate-y-12 opacity-0"}`}
+            className={`${btnPrimary} transition-all duration-700 ${aberto ? `translate-y-0 opacity-100 ${atrasos[5]}` : "translate-y-12 opacity-0"}`}
           >
-            Alugue Agora
+            Alugue agora
             <ArrowRight size={20} weight="bold" aria-hidden />
           </a>
         </div>
