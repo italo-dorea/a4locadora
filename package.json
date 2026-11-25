@@ -1,0 +1,28 @@
+{
+  "name": "a4locadora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site da A4 Locadora (Next.js com export estático)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve out",
+    "lint": "tsc --noEmit",
+    "assets": "node scripts/optimize-assets.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.2.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.3"
+  }
+}

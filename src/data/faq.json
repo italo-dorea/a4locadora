@@ -1,0 +1,18 @@
+{
+  "perguntas": [
+    { "pergunta": "Quais documentos são necessários para alugar?", "resposta": "CNH digital com foto e comprovante de residência atual. Para motos, é preciso habilitação categoria A; para carros, categoria B." },
+    { "pergunta": "Existe um período mínimo de aluguel?", "resposta": "Sim, o período mínimo é de 12 meses, com flexibilidade para durações mais longas e tarifas reduzidas." },
+    { "pergunta": "Como funciona a política de combustível?", "resposta": "O veículo é entregue com combustível fora da reserva. A devolução é feita sem taxa de reabastecimento, independentemente da quantidade." },
+    { "pergunta": "Existe limite de quilometragem?", "resposta": "Não há limite de quilometragem. O contrato é individual e de uso exclusivo do locatário." },
+    { "pergunta": "Posso fazer viagens com o veículo alugado?", "resposta": "Sim, desde que dentro do limite contratado e da cobertura do seguro. Informe o itinerário no momento da reserva." },
+    { "pergunta": "O seguro está incluso no aluguel?", "resposta": "Todos os carros e motos incluem seguro contra roubo e furto. Proteções adicionais, como cobertura a terceiros e assistência 24h, também estão disponíveis." },
+    { "pergunta": "Qual a idade mínima para alugar?", "resposta": "21 anos, com habilitação válida há no mínimo 2 anos (categoria A para moto, B para carro)." },
+    { "pergunta": "Existe taxa por atraso na devolução?", "resposta": "Sim, a taxa varia conforme o período de atraso. Entre em contato imediatamente caso precise de mais tempo." },
+    { "pergunta": "Posso adicionar um segundo condutor?", "resposta": "Não. O contrato de aluguel é individual e não é permitido adicionar um segundo condutor." },
+    { "pergunta": "O que fazer em caso de acidente?", "resposta": "Garanta sua segurança, registre o ocorrido junto à autoridade competente e nos informe imediatamente. Fornecemos assistência e orientações sobre a cobertura do seguro." },
+    { "pergunta": "Posso reservar um modelo específico?", "resposta": "Você pode indicar sua preferência de modelo. Faremos o possível para atendê-la, de acordo com a disponibilidade da frota." },
+    { "pergunta": "Vocês trabalham com veículos elétricos ou outros combustíveis?", "resposta": "Atualmente trabalhamos com carros e motos a combustível tradicional. Veículos elétricos estão em fase de exploração pela nossa equipe." },
+    { "pergunta": "Como são calculadas as tarifas?", "resposta": "O cálculo considera modelo, período, acessórios e seguros adicionais, sempre com transparência total no processo." },
+    { "pergunta": "É possível alterar o local de devolução?", "resposta": "É possível, dependendo da nossa rede e disponibilidade, podendo estar sujeito a uma taxa adicional." }
+  ]
+}

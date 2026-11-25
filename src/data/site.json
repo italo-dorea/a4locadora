@@ -1,0 +1,15 @@
+{
+  "nome": "A4 Locadora",
+  "url": "https://a4locadora.com.br",
+  "emailContato": "contato@a4locadora.com.br",
+  "whatsapp": "5571996963026",
+  "telefoneExibicao": "(71) 99696-3026",
+  "endereco": "Av. Tancredo Neves, 1189, Edif. Guimarães Trade, Sala 1603, Caminho das Árvores, Salvador/BA — CEP 41820-021",
+  "instagram": "https://instagram.com/a4locadora",
+  "youtube": "https://youtube.com/@a4locadora",
+  "formulario": {
+    "assunto": "Nova solicitação de locação — Site A4",
+    "tamanhoMaximoArquivoMB": 5,
+    "tamanhoMaximoTotalMB": 10
+  }
+}

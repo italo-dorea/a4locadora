@@ -1,0 +1,57 @@
+{
+  "_comentario": "Cadastro da frota. Para adicionar um veículo, copie um bloco, coloque a imagem em public/assets e rode o build. tipo: carro | moto. destaqueHero: aparece no carrossel do topo.",
+  "veiculos": [
+    {
+      "id": "hb20-2024",
+      "tipo": "carro",
+      "marca": "Hyundai",
+      "modelo": "HB20",
+      "ano": 2024,
+      "cor": "Prata",
+      "imagem": "/assets/hb20-2024.webp",
+      "alt": "Hyundai HB20 2024 branco",
+      "disponivel": true,
+      "destaqueHero": true,
+      "caracteristicas": ["Seguro contra roubo e furto incluso", "Sem limite de quilometragem"]
+    },
+    {
+      "id": "onix-2024",
+      "tipo": "carro",
+      "marca": "Chevrolet",
+      "modelo": "Onix",
+      "ano": 2024,
+      "cor": "Branco",
+      "imagem": "/assets/onix-2024.webp",
+      "alt": "Chevrolet Onix 2024 branco",
+      "disponivel": true,
+      "destaqueHero": true,
+      "caracteristicas": ["Seguro contra roubo e furto incluso", "Sem limite de quilometragem"]
+    },
+    {
+      "id": "factor-2025",
+      "tipo": "moto",
+      "marca": "Yamaha",
+      "modelo": "Factor",
+      "ano": 2025,
+      "cor": "Branca",
+      "imagem": "/assets/factor-2025.webp",
+      "alt": "Yamaha Factor 2025 branca",
+      "disponivel": true,
+      "destaqueHero": true,
+      "caracteristicas": ["Seguro contra roubo e furto incluso", "Sem limite de quilometragem"]
+    },
+    {
+      "id": "crosser-2025",
+      "tipo": "moto",
+      "marca": "Honda",
+      "modelo": "Crosser",
+      "ano": 2025,
+      "cor": "Azul",
+      "imagem": "/assets/crosser-2025.webp",
+      "alt": "Honda Crosser 2025",
+      "disponivel": true,
+      "destaqueHero": true,
+      "caracteristicas": ["Seguro contra roubo e furto incluso", "Sem limite de quilometragem"]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Hospedagem Apache (Hostinger): página 404 personalizada gerada pelo Next
+ErrorDocument 404 /404.html

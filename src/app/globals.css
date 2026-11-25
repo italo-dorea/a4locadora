@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Tokens da marca A4 (verde) + fundos escuros permitidos pelo sistema de design */
+@theme {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #216849;
+  --color-primary-container: #3d8160;
+  --color-primary-fixed: #abf2ca;
+  --color-primary-fixed-dim: #8fd5af;
+  --color-on-primary-fixed: #002113;
+  --color-secondary-container: #5dfd8a;
+  --color-on-secondary-container: #007232;
+  --color-surface: #f9f9fc;
+  --color-surface-gray: #f8faf9;
+  --color-surface-variant: #e2e2e5;
+  --color-on-surface: #1a1c1e;
+  --color-on-surface-variant: #404943;
+  --color-border-subtle: #e2e8e5;
+  --color-error: #ba1a1a;
+  --color-whatsapp: #25d366;
+
+  /* Fundos escuros (únicos permitidos) */
+  --color-ink-0: #000000;
+  --color-ink-900: #181818;
+  --color-ink-800: #1f1f1f;
+  --color-ink-700: #272727;
+  --color-ink-600: #313131;
+
+  /* Curva de movimento: massa e mola */
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sem órfãs: títulos balanceados, textos com "pretty" */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p, li, summary {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.on-dark :focus-visible {
+  outline-color: var(--color-primary-fixed);
+}
+
+/* Título do hero: gradiente apenas no texto (tema escuro: #FFFFFF para #9B9B9B) */
+.hero-heading {
+  background-image: linear-gradient(to right, #ffffff, #9b9b9b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Pulso do botão flutuante de WhatsApp */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(37 211 102 / 0.5); }
+  50% { box-shadow: 0 0 0 12px rgb(37 211 102 / 0); }
+}
+.wa-pulse {
+  animation: wa-pulse 2.4s var(--ease-fluid) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-pulse { animation: none; }
+}
+
