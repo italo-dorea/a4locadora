@@ -8,11 +8,11 @@ const linkClass =
 
 export function Footer() {
   return (
-    <footer className={`on-dark w-full bg-ink-0 text-white ${SECAO}`}>
+    <footer className={`on-dark relative overflow-hidden aurora-bg aurora-alt w-full bg-ink-0 text-white ${SECAO}`}>
       <div className={`${CONTAINER} grid grid-cols-1 gap-16 md:grid-cols-2`}>
         <div className="flex flex-col gap-6">
           <div className="self-start rounded-lg bg-white p-2">
-            <Image src="/assets/logo-a4.webp" alt="A4 Locadora" width={640} height={230} className="h-12 w-auto" />
+            <Image src="/assets/logo-a4.webp" alt="A4 Locadora de Motos" width={640} height={230} className="h-12 w-auto" />
           </div>
           <div className="flex items-center gap-4">
             <a aria-label="Instagram" href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-md text-white/70 transition-all duration-500 ease-fluid hover:text-primary-fixed-dim">

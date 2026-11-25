@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "npx serve out",
     "lint": "tsc --noEmit",
-    "assets": "node scripts/optimize-assets.mjs"
+    "assets": "node scripts/optimize-assets.mjs",
+    "prebuild": "node scripts/gerar-llms.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

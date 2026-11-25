@@ -22,10 +22,10 @@ export function ComoFunciona() {
   ];
 
   return (
-    <section id="como-funciona" className={`on-dark scroll-mt-24 bg-ink-900 text-white ${SECAO}`}>
+    <section id="como-funciona" className={`on-dark relative overflow-hidden aurora-bg aurora-alt scroll-mt-24 bg-ink-900 text-white ${SECAO}`}>
       <div className={CONTAINER}>
         <Reveal className="mb-16 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">Como Funciona</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">Como Funciona o Aluguel de Moto</h2>
         </Reveal>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {itens.map(({ Icone, titulo, texto }, i) => (

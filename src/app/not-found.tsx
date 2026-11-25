@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
 import { btnPrimary } from "@/lib/ui";
 
-export const metadata = { title: "Página não encontrada | A4 Locadora", robots: { index: false } };
+export const metadata = { title: "Página não encontrada", robots: { index: false, follow: false } };
 
 export default function NotFound() {
   return (

@@ -20,7 +20,8 @@ for (const [from, to, width] of jobs) {
 }
 
 // Favicon (App Router detecta src/app/icon.png)
-await sharp(`${src}/logo-a4-icon.png`).resize(256, 256).png().toFile("src/app/icon.png");
+await sharp(`${src}/logo-a4-icon.png`).resize(64, 64).png({ palette: true, quality: 80, compressionLevel: 9 }).toFile("src/app/icon.png");
+await sharp(`${src}/logo-a4-icon.png`).resize(180, 180).png({ palette: true, quality: 80, compressionLevel: 9 }).toFile("src/app/apple-icon.png");
 
 // Imagem de compartilhamento 1200x630: logo centralizada sobre fundo claro
 const logo = await sharp(`${src}/logo-a4.png`).resize({ width: 760 }).png().toBuffer();

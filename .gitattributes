@@ -1,0 +1,5 @@
+* text=auto
+# Arquivos de servidor e SEO precisam ir com quebra de linha Unix (LF), mesmo editados no Windows
+public/.htaccess text eol=lf
+public/llms.txt text eol=lf
+public/*.txt text eol=lf

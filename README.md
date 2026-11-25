@@ -29,9 +29,23 @@ O conteúdo (textos, motos, planos e FAQ) segue o site anterior em WordPress. O 
 
 Ao enviar, em segundo plano (sem sair da página):
 
-1. **Email**: enviado via [FormSubmit](https://formsubmit.co) (endpoint AJAX) para `emailContato` em `site.json` (hoje `contato@a4locadora.com.br`), com os mesmos campos e anexos do formulário original.
+1. **Email**: enviado via [FormSubmit](https://formsubmit.co) (endpoint AJAX) para `formulario.destino` em `site.json`, com os campos e anexos do formulário.
 2. **WhatsApp**: abre `wa.me` com uma mensagem montada com os dados preenchidos (arquivos não podem ir por link, por isso seguem só por email).
 
 Se o email falhar, o formulário continua preenchido, o WhatsApp abre mesmo assim e o usuário pode tentar de novo.
 
+### Proteção contra bots e envios em massa
+
+No navegador (`src/lib/lead.ts`): campo isca `_honey`, tempo mínimo de 5 segundos, limite de 1 envio por minuto e 3 por hora por aparelho, validação de telefone (DDD real), nome sem links, email com sintaxe, bloqueio de email descartável, sugestão para erro de digitação (gmial.com) e checagem DNS do domínio.
+No FormSubmit: `_honey` e `_blacklist` (termos em `site.json`, campo `bloquearTermos`).
+
+Limite honesto: o endpoint do FormSubmit é público, então quem chamar o endpoint direto não passa pelas regras do navegador. Depois de ativar o endereço no FormSubmit, troque `formulario.destino` pelo código aleatório que ele envia por email (email invisível), para o endereço não ficar exposto no código do site.
+
 > O FormSubmit exige confirmar o endereço de destino no primeiro envio (chega um email de ativação na caixa de entrada).
+
+## SEO
+
+- Título, descrição, canonical, Open Graph e dados estruturados (empresa, site, página, FAQ) em `src/app/layout.tsx`, `src/app/page.tsx` e `src/lib/seo.ts`.
+- `robots.txt` e `sitemap.xml` são gerados no build (`src/app/robots.ts` e `sitemap.ts`).
+- `llms.txt` é gerado dos JSONs a cada `npm run build` (`scripts/gerar-llms.mjs`); não edite o arquivo à mão.
+- `public/.htaccess`: HTTPS, domínio sem www, compressão, cache, cabeçalhos de segurança e 404 real. Publique junto com a pasta `out/`.

@@ -10,7 +10,7 @@ export function Planos() {
     <section id="planos" className={`on-dark scroll-mt-24 bg-primary text-white ${SECAO}`}>
       <div className={CONTAINER}>
         <Reveal className="mb-16 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">Planos</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">Planos de Aluguel de Moto</h2>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

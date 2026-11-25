@@ -1,3 +1,4 @@
+import { AuroraPause } from "@/components/AuroraPause";
 import { ChamadaFinal } from "@/components/ChamadaFinal";
 import { ComoFunciona } from "@/components/ComoFunciona";
 import { Faq } from "@/components/Faq";
@@ -11,19 +12,32 @@ import { QuemSomos } from "@/components/QuemSomos";
 import { Videos } from "@/components/Videos";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import faq from "@/data/faq.json";
-import { siteConfig } from "@/lib/data";
+import { formatarReais, planos, siteConfig } from "@/lib/data";
+import { descricaoSeo, tituloSeo } from "@/lib/seo";
 
+const U = siteConfig.url;
+
+// Dados estruturados (JSON-LD) ligados entre si por @id: empresa, site, página e FAQ
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AutoRental",
+      "@type": ["AutoRental", "LocalBusiness"],
+      "@id": `${U}/#empresa`,
       name: siteConfig.nome,
-      url: siteConfig.url,
+      alternateName: "A4 Locadora",
+      description: descricaoSeo,
+      url: U,
+      logo: `${U}/icon.png`,
+      image: `${U}/opengraph-image.png`,
       email: siteConfig.emailContato,
       telephone: "+" + siteConfig.whatsapp,
-      image: `${siteConfig.url}/opengraph-image.png`,
-      areaServed: "Salvador e região Metropolitana",
+      priceRange: `${formatarReais(Math.min(...planos.map((p) => p.valorDia)))} a ${formatarReais(Math.max(...planos.map((p) => p.valorDia)))} por dia`,
+      currenciesAccepted: "BRL",
+      areaServed: [
+        { "@type": "City", name: "Salvador" },
+        { "@type": "AdministrativeArea", name: "Região Metropolitana de Salvador" },
+      ],
       address: {
         "@type": "PostalAddress",
         streetAddress: "Av. Tancredo Neves, 1189, Edif. Guimarães Trade Sala 1603, Caminho das Árvores",
@@ -32,9 +46,52 @@ const jsonLd = {
         postalCode: "41820-021",
         addressCountry: "BR",
       },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+" + siteConfig.whatsapp,
+        email: siteConfig.emailContato,
+        availableLanguage: "pt-BR",
+      },
+      sameAs: [siteConfig.instagram, siteConfig.youtube],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Planos de aluguel de moto",
+        itemListElement: planos.map((p) => ({
+          "@type": "Offer",
+          name: p.nome + (p.subtitulo ? ` (${p.subtitulo})` : ""),
+          description: `Diária a partir de ${formatarReais(p.valorDia)}, valor semanal ${formatarReais(p.valorSemana)}, caução de ${formatarReais(p.caucao)} em até ${p.parcelasCaucao}x.`,
+          priceCurrency: "BRL",
+          priceSpecification: { "@type": "UnitPriceSpecification", price: p.valorDia, priceCurrency: "BRL", unitCode: "DAY", unitText: "dia" },
+          itemOffered: { "@type": "Service", name: "Aluguel de moto" },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${U}/#site`,
+      url: U,
+      name: siteConfig.nome,
+      inLanguage: "pt-BR",
+      publisher: { "@id": `${U}/#empresa` },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${U}/#pagina`,
+      url: `${U}/`,
+      name: tituloSeo,
+      description: descricaoSeo,
+      inLanguage: "pt-BR",
+      isPartOf: { "@id": `${U}/#site` },
+      about: { "@id": `${U}/#empresa` },
+      primaryImageOfPage: { "@type": "ImageObject", url: `${U}/opengraph-image.png` },
+      // Trechos indicados para leitura por assistentes de voz
+      speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "#quem-somos p", "#faq summary"] },
     },
     {
       "@type": "FAQPage",
+      "@id": `${U}/#faq`,
+      isPartOf: { "@id": `${U}/#pagina` },
       mainEntity: faq.perguntas.map((p) => ({
         "@type": "Question",
         name: p.pergunta,
@@ -67,6 +124,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <AuroraPause />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );

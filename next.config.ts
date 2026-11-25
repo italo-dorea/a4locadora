@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true }, // sem servidor de otimização de imagens
   reactStrictMode: true,
+  experimental: { inlineCss: true }, // CSS dentro do HTML: sem requisição bloqueante
 };
 
 export default nextConfig;

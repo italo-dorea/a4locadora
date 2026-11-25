@@ -11,7 +11,7 @@ export function Frota() {
     <section id="motos" className={`scroll-mt-24 bg-surface-gray ${SECAO}`}>
       <div className={CONTAINER}>
         <Reveal className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-on-surface md:text-5xl">Nossa Frota</h2>
+          <h2 className="text-4xl font-bold text-on-surface md:text-5xl">Nossa Frota de Motos para Aluguel</h2>
         </Reveal>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

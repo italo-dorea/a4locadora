@@ -12,7 +12,7 @@ export function Faq() {
     <section id="faq" className={`scroll-mt-24 bg-surface ${SECAO}`}>
       <div className={CONTAINER}>
         <Reveal className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-on-surface md:text-5xl">Perguntas Frequentes</h2>
+          <h2 className="text-4xl font-bold text-on-surface md:text-5xl">Perguntas Frequentes sobre Aluguel de Moto</h2>
         </Reveal>
         <div className="grid grid-cols-1 items-start gap-x-6 gap-y-3 md:grid-cols-2">
           {colunas.map((coluna, c) => (

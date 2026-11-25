@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play } from "@phosphor-icons/react/ssr";
+import { Play } from "./icons";
 import { Reveal } from "./Reveal";
 import { siteConfig } from "@/lib/data";
 import { CONTAINER, SECAO } from "@/lib/ui";
@@ -12,12 +12,12 @@ export function Videos() {
   const { id, titulo } = siteConfig.video;
 
   return (
-    <section id="videos" className={`on-dark scroll-mt-24 bg-ink-900 text-white ${SECAO}`}>
+    <section id="videos" className={`on-dark relative overflow-hidden aurora-bg scroll-mt-24 bg-ink-900 text-white ${SECAO}`}>
       <div className={CONTAINER}>
         <Reveal className="mb-16 text-center">
           <h2 className="text-4xl font-bold md:text-5xl">Vídeos</h2>
         </Reveal>
-        <Reveal delay={100} className="mx-auto max-w-4xl">
+        <Reveal delay={100}>
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-ink-700 bg-ink-800">
             {tocando ? (
               <iframe

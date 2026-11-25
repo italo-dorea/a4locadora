@@ -1,0 +1,73 @@
+# A4 Locadora de Motos
+
+> Locadora de motos em Salvador e região Metropolitana (BA), especializada em aluguel para motoboys e motoristas de aplicativos de entrega. Planos flexíveis, seguro contra roubo e furto incluído e manutenção dividida entre locador e locatário.
+
+O site é uma página única. Os links abaixo levam às seções dela.
+
+## Seções do site
+
+- [Quem Somos](https://a4locadora.com.br/#quem-somos): Quem é a A4 Locadora e qual é a missão da empresa.
+- [Como Funciona o Aluguel de Moto](https://a4locadora.com.br/#como-funciona): Flexibilidade de planos, aluguel online e manutenção dividida.
+- [Nossa Frota de Motos](https://a4locadora.com.br/#motos): Motos da frota: Factor 2025 Branca e Crosser 2025 Azul.
+- [Planos de Aluguel de Moto](https://a4locadora.com.br/#planos): Valores de diária, valor semanal e caução.
+- [Perguntas Frequentes](https://a4locadora.com.br/#faq): Documentos, prazo, combustível, seguro, quilometragem e devolução.
+- [Vídeos](https://a4locadora.com.br/#videos): Vídeo institucional no YouTube.
+- [Formulário de Locação](https://a4locadora.com.br/#contato): Cadastro de reserva com envio por email e WhatsApp.
+
+## Dados da empresa
+
+- Site: https://a4locadora.com.br
+- WhatsApp e telefone: (71) 99696-3026
+- Email: contato@a4locadora.com.br
+- Endereço: Av. Tancredo Neves, 1189, Edif. Guimarães Trade Sala 1603, Caminho das Árvores, Salvador/BA, CEP 41820-021
+- Instagram: https://instagram.com/a4locadora
+- YouTube: https://youtube.com/@a4locadora
+
+## Planos de locação
+
+- Plano Anual: diária a partir de R$ 42,00, valor semanal R$ 300,00, caução de R$ 600,00 em até 5x. Consulte informações e disponibilidade.
+- Plano Minha Moto (30 meses): diária a partir de R$ 51,00, valor semanal R$ 360,00, caução de R$ 700,00 em até 5x. Consulte informações e disponibilidade.
+
+## Perguntas frequentes
+
+### Quais documentos são necessários para alugar uma moto?
+Para alugar uma moto, você precisará apresentar um documento habilitação com foto (CNH), comprovante de residência atual e a carteira de habilitação categoria A válida.
+
+### Existe um período mínimo de aluguel?
+Sim, o período mínimo de aluguel é de 12 meses. No entanto, oferecemos flexibilidade para aluguéis de longa duração com tarifas reduzidas.
+
+### Qual é a política de combustível?
+A moto será entregue com combustível fora da reserva, e você poderá devolvê-la com a quantidade de combustível que preferir. Não será cobrada nenhuma taxa de reabastecimento.
+
+### Há restrições de quilometragem para o aluguel das motos?
+Não há limite de quilometragem para o aluguel das motos. No entanto, o contrato é individual, e a moto deve ser utilizada exclusivamente pelo locatário, não sendo permitida sua utilização por outras pessoas.
+
+### Posso viajar com a moto alugada?
+Sim, você pode viajar com a moto alugada. No entanto, o uso para viagens dependerá do limite de quilometragem contratado e da cobertura do seguro. Recomendamos informar o itinerário planejado no momento da reserva para garantir que tudo esteja devidamente coberto.
+
+### E o seguro ?
+Todas as nossas motos possuem seguro incluído no valor do aluguel, com cobertura contra roubo e furto, sem custos adicionais. Caso deseje, você pode contratar proteções adicionais, como cobertura para terceiros e assistência 24 horas, no momento da assinatura do contrato.
+
+### Existe uma idade mínima para alugar uma moto?
+Sim, o locatário deve ter pelo menos 21 anos de idade e possuir carteira de habilitação categoria A válida por no mínimo 2 anos.
+
+### Existe uma taxa por atraso na devolução da moto?
+Sim, atrasos na devolução da moto estão sujeitos a uma taxa adicional. A taxa varia conforme o período de atraso. Recomendamos que entre em contato conosco o quanto antes se prever que não conseguirá devolver a moto no horário agendado.
+
+### Posso adicionar um segundo condutor no contrato de aluguel?
+Não, o contrato de aluguel é individual e não é permitido adicionar um segundo condutor. A moto deve ser utilizada exclusivamente pelo locatário.
+
+### O que devo fazer em caso de acidente?
+Em caso de acidente, a primeira ação é garantir a segurança de todos os envolvidos. Depois, entre em contato com o órgão de trânsito competente para registrar a ocorrência e nos informe imediatamente. Forneceremos assistência e orientações sobre os próximos passos, incluindo informações sobre cobertura do seguro.
+
+### Posso reservar uma moto específica?
+Você pode indicar sua preferência por um modelo específico durante o processo de reserva. Faremos o nosso melhor para atender à sua solicitação com base na disponibilidade das motos no momento da retirada.
+
+### Qual a política para uso de combustível alternativo ou elétrico?
+Atualmente, todas as nossas motos utilizam combustível tradicional. Estamos explorando a inclusão de motos elétricas em nossa frota e atualizaremos nossos clientes conforme essas opções tornarem-se disponíveis.
+
+### Como são calculadas as tarifas de aluguel?
+As tarifas de aluguel são calculadas com base no modelo da moto, no período de aluguel e em quaisquer acessórios ou seguros adicionais selecionados. Todas as tarifas são claramente detalhadas no processo de reserva para garantir transparência total.
+
+### Posso alterar o local de devolução da moto?
+Dependendo da nossa rede de lojas e disponibilidade, é possível alterar o local de devolução. Esta opção pode estar sujeita a uma taxa adicional. Consulte-nos durante a reserva para verificar essa possibilidade.

@@ -72,6 +72,53 @@ p, li, summary {
   color: transparent;
 }
 
+/* Hero: fundo preto com gradiente verde em movimento (só CSS, na camada ::before; transform é leve para a GPU) */
+.aurora-bg {
+  isolation: isolate;
+}
+.aurora-bg::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 40% at 20% 30%, rgb(33 104 73 / 0.55), transparent 70%),
+    radial-gradient(35% 35% at 80% 20%, rgb(61 129 96 / 0.4), transparent 70%),
+    radial-gradient(45% 45% at 60% 85%, rgb(143 213 175 / 0.16), transparent 70%);
+  animation: aurora 20s var(--ease-fluid) infinite alternate;
+}
+@keyframes aurora {
+  0% { transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1); }
+  50% { transform: translate3d(5%, 4%, 0) rotate(8deg) scale(1.1); }
+  100% { transform: translate3d(-2%, 6%, 0) rotate(-6deg) scale(1.03); }
+}
+/* pausado fora da tela (AuroraPause) */
+.aurora-paused::before {
+  animation-play-state: paused;
+}
+/* variação de fase: seções vizinhas não se movem em sincronia */
+.aurora-alt::before {
+  animation-delay: -10s;
+  animation-direction: alternate-reverse;
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-bg::before { animation: none; }
+}
+
+/* Entrada do hero (LCP): só move, nunca esconde o conteúdo. Roda sem JavaScript. */
+@keyframes entrada {
+  from { transform: translate3d(0, 16px, 0); }
+  to { transform: none; }
+}
+.entrada {
+  animation: entrada 800ms var(--ease-fluid) both;
+  animation-delay: var(--atraso, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .entrada { animation: none; }
+}
+
 details > summary::-webkit-details-marker {
   display: none;
 }

@@ -18,6 +18,22 @@
     "mensagem": "No momento estamos sem motos disponíveis, preencha os dados para cadastro de reserva.",
     "assunto": "Nova solicitação de locação — Site A4",
     "tamanhoMaximoArquivoMB": 5,
-    "tamanhoMaximoTotalMB": 10
+    "tamanhoMaximoTotalMB": 10,
+    "destino": "contato@a4locadora.com.br",
+    "bloquearTermos": [
+      "http://",
+      "https://",
+      "www.",
+      "bitcoin",
+      "cripto",
+      "crypto",
+      "casino",
+      "cassino",
+      "viagra",
+      "forex",
+      "backlink",
+      "empréstimo fácil"
+    ],
+    "_comentario": "destino: email que recebe o formulário. Depois de ativar no FormSubmit, troque pelo código aleatório (email invisível) para o endereço não ficar exposto no código do site."
   }
 }

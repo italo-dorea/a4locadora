@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight } from "./icons";
 import { btnPrimary, CONTAINER, SECAO_X } from "@/lib/ui";
 
 const links = [
@@ -55,7 +55,7 @@ export function Header() {
           className={`${CONTAINER} pointer-events-auto mt-6 flex items-center justify-between gap-6 rounded-full border border-border-subtle bg-white/80 py-2 pr-2 pl-4 shadow-sm backdrop-blur-xl transition-all duration-700 ease-fluid`}
         >
           <a href="#inicio" aria-label="A4 Locadora, ir para o início" className="shrink-0 rounded-full">
-            <Image src="/assets/logo-a4.webp" alt="A4 Locadora" width={640} height={230} className="h-8 w-auto" priority />
+            <Image src="/assets/logo-a4.webp" alt="A4 Locadora de Motos" width={640} height={230} className="h-8 w-auto" priority />
           </a>
 
           <nav aria-label="Principal" className="hidden items-center gap-1 md:flex">
